@@ -286,7 +286,7 @@ export const generateCytoscapeElement = (data, maxDataOfGraph, isNew) => {
   const edgeLegend = {};
 
   function generateElements(alias, val) {
-    const labelName = val.label.trim();
+    const labelName = val.label?.trim() || 'NoLabel';
     let source = val.start;
     let target = val.end;
 
@@ -350,12 +350,13 @@ export const generateCytoscapeElement = (data, maxDataOfGraph, isNew) => {
         nodeLabelCaptions[labelName] = 'gid';
 
         // if has property named [ name ], than set [ name ]
-        if (Object.prototype.hasOwnProperty.call(val.properties, 'name')) {
+        if (val.properties && Object.prototype.hasOwnProperty.call(val.properties, 'name')) {
           nodeLabelCaptions[labelName] = 'name';
         }
       }
 
-      if (!Object.prototype.hasOwnProperty.call(val.properties, nodeLegend.caption)) {
+      // eslint-disable-next-line max-len
+      if (val.properties && !Object.prototype.hasOwnProperty.call(val.properties, nodeLegend.caption)) {
         nodeLegend[labelName].caption = getCaption('node', val);
       }
       nodes.push(

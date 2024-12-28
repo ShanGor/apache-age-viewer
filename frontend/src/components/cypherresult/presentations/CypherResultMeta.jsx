@@ -32,9 +32,9 @@ const CypherResultMeta = ({ database, query, data }) => (
     <Row>
       <Col span={6}><b>Database URI</b></Col>
       <Col span={18}>
-        {database.host}
+        {database?.host}
         :
-        {database.port}
+        {database?.port}
       </Col>
     </Row>
     <Row>

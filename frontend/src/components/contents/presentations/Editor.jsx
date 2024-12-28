@@ -234,7 +234,7 @@ Editor.propTypes = {
   isActive: PropTypes.bool.isRequired,
   database: PropTypes.shape({
     status: PropTypes.string.isRequired,
-    host: PropTypes.string.isRequired,
+    host: PropTypes.string,
   }).isRequired,
   executeCypherQuery: PropTypes.func.isRequired,
   addCommandHistory: PropTypes.func.isRequired,

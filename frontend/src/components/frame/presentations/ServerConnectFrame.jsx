@@ -32,12 +32,12 @@ import { addFrame, trimFrame } from '../../../features/frame/FrameSlice';
 import { /* getMetaChartData, */ getMetaData } from '../../../features/database/MetadataSlice';
 
 const FormInitialValue = {
-  database: '',
+  database: 'postgres',
   graph: '',
-  host: '',
+  host: 'localhost',
   password: '',
-  port: null,
-  user: '',
+  port: '5432',
+  user: 'postgres',
 };
 
 const ServerConnectFrame = ({

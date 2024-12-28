@@ -57,7 +57,7 @@ class CypherResultTab extends Component {
         >
           <IconGraph />
           <br />
-          <b style={{ fontSize: '14px;' }}>Graph</b>
+          <b style={{ fontSize: '14px' }}>Graph</b>
         </button>
         <div
           style={{
@@ -75,7 +75,7 @@ class CypherResultTab extends Component {
         >
           <FontAwesomeIcon icon={faTable} style={{ fontSize: '25px' }} />
           <br />
-          <b style={{ fontSize: '14px;' }}>Table</b>
+          <b style={{ fontSize: '14px' }}>Table</b>
         </button>
       </div>
     );

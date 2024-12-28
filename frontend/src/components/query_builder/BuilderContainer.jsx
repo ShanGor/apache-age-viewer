@@ -58,11 +58,8 @@ const BuilderContainer = ({ open, setOpen, finder }) => {
         value={selectedGraph}
       >
         {
-          availableGraphs.map((s) => (
-            <Select.Option
-              value={s}
-            />
-          ))
+          // eslint-disable-next-line react/no-array-index-key
+          availableGraphs.map((s, idx) => (<Select.Option key={`ag-option-${idx}`} value={s} />))
           }
       </Select>
 

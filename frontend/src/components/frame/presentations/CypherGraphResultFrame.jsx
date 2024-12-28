@@ -179,16 +179,14 @@ const CypherResultFrame = ({
         bodyNoPadding
         onSearch={() => setFilterModalVisible(true)}
         onThick={() => setThicknessModalVisible(true)}
-        thicnessMenu={
-          (
-            <EdgeThicknessMenu
-              onSubmit={(thicness) => {
-                setGlobalThickness(thicness);
-              }}
-              properties={edgeProperties}
-            />
-          )
-        }
+        thicnessMenu={() => (
+          <EdgeThicknessMenu
+            onSubmit={(thicness) => {
+              setGlobalThickness(thicness);
+            }}
+            properties={edgeProperties}
+          />
+        )}
         onSearchCancel={() => setGlobalFilter(null)}
         onRefresh={refreshFrame}
         onDownload={(type) => {

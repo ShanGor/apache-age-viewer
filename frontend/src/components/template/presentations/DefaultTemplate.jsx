@@ -116,7 +116,7 @@ const DefaultTemplate = ({
           <Button onClick={() => setOpen(true)}>
             <FontAwesomeIcon icon={faBars} />
           </Button>
-          <BuilderContainer open={open} setOpen={setOpen} finder={finder} />
+          {finder && <BuilderContainer open={open} setOpen={setOpen} finder={finder} />}
         </div>
         <div className="editor-division wrapper-extension-padding">
 

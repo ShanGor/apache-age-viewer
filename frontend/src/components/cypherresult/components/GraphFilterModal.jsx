@@ -155,7 +155,7 @@ const GraphFilterModal = ({
     );
   }, [propertyElements, filterList]);
   return (
-    <Modal title={isTable ? 'Filter Data in Table' : 'Filter on Graph'} visible={visible} onOk={onOk} onCancel={() => setVisible(false)} width={800}>
+    <Modal title={isTable ? 'Filter Data in Table' : 'Filter on Graph'} open={visible} onOk={onOk} onCancel={() => setVisible(false)} width={800}>
       {
         filterElements
       }
