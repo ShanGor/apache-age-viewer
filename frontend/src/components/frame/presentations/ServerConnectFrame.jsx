@@ -88,7 +88,7 @@ const ServerConnectFrame = ({
               onFinish={connectToDatabase}
             >
               <Form.Item name="host" label="Connect URL" rules={[{ required: true }]}>
-                <Input placeholder="192.168.0.1" />
+                <Input placeholder="localhost" />
               </Form.Item>
               <Form.Item name="port" label="Connect Port" rules={[{ required: true }]}>
                 <InputNumber placeholder="5432" className={styles.FullWidth} />
